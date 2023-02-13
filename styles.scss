@@ -217,6 +217,9 @@ a:visited{
             margin-left: 1rem;
             @include textos;
         }
+        .bi{
+            cursor: pointer;
+        }
     }
 }
 

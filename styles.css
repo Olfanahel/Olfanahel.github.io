@@ -208,6 +208,9 @@ a:visited {
     text-align: center;
     font-family: "Oswald", sans-serif;
   }
+  .footer-contenedor .bi {
+    cursor: pointer;
+  }
 }
 @keyframes animacionTexto {
   from {
