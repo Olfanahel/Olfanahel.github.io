@@ -1,0 +1,219 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+}
+
+a:link {
+  text-decoration: none;
+  color: black;
+}
+
+a:visited {
+  text-decoration: none;
+  color: black;
+}
+
+.bi {
+  color: white;
+  padding-right: 0.5rem;
+}
+
+.navbar-custom {
+  background-color: #8E3021;
+}
+
+.nav-link-custom {
+  border-bottom: 2px solid black;
+  color: white;
+}
+
+.inicio-contenedor {
+  height: 93.5vh;
+  background-color: #4D504D;
+  display: flex;
+  position: relative;
+  overflow-x: hidden;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.inicio-contenedor img {
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+  position: absolute;
+  opacity: 0.8;
+}
+.inicio-contenedor .texto-principal {
+  position: absolute;
+  text-align: center;
+  z-index: 10;
+  font-family: "Oswald", sans-serif;
+  font-size: 1.8rem;
+  padding-left: 0.5rem;
+}
+.inicio-contenedor .boton-principal {
+  position: absolute;
+  z-index: 10;
+  bottom: 12rem;
+  border: 2px solid #8E3021;
+  background: none;
+  border-radius: 5px;
+  padding: 0.5rem 2rem;
+  font-family: "Oswald", sans-serif;
+  font-size: 1rem;
+  text-decoration: none;
+}
+.inicio-contenedor .boton-principal:focus {
+  background: #8E3021;
+}
+.inicio-contenedor .boton-principal:hover {
+  background-color: #8E3021;
+}
+
+.seccion-conoceme {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  border-bottom: 2px solid #8E3021;
+  background: #D2CECD;
+  justify-content: center;
+  padding-top: 5rem;
+}
+.seccion-conoceme .img-conoceme {
+  width: 40%;
+}
+.seccion-conoceme .img-conoceme img {
+  width: 100%;
+  border-radius: 50%;
+}
+.seccion-conoceme .texto-conoceme {
+  text-align: center;
+  font-family: "Oswald", sans-serif;
+}
+
+.sub-titulos-contenedor {
+  display: flex;
+  justify-content: center;
+  background-color: #D2CECD;
+  padding-top: 0.5rem;
+}
+.sub-titulos-contenedor h2 {
+  text-align: center;
+  font-family: "Oswald", sans-serif;
+  font-size: 4rem;
+}
+
+.seccion-estudios {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  border-bottom: 2px solid #8E3021;
+  background: #D2CECD;
+  background: #D2CECD;
+}
+.seccion-estudios .imagen-estudios {
+  width: 90%;
+}
+.seccion-estudios .imagen-estudios img {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+.seccion-estudios .texto-estudios {
+  text-align: center;
+  font-family: "Oswald", sans-serif;
+  margin-bottom: 5rem;
+}
+
+.seccion-tecnologias {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  border-bottom: 2px solid #8E3021;
+  background: #D2CECD;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+.seccion-tecnologias img {
+  width: 50%;
+}
+.seccion-tecnologias .sub-titulos-contenedor {
+  padding-left: 1.3rem;
+}
+
+.footer-contenedor {
+  background-color: #8E3021;
+  height: 5rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.footer-contenedor .bi {
+  font-size: 3rem;
+}
+.footer-contenedor .texto-footer {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .inicio-contenedor {
+    height: 100vh;
+  }
+  .nav-link-custom {
+    border: none;
+  }
+  .seccion-conoceme .img-conoceme {
+    width: 20%;
+    margin-bottom: 2rem;
+  }
+  .seccion-conoceme .img-conoceme img {
+    width: 100%;
+  }
+  .seccion-estudios {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .seccion-estudios .sub-titulos-contenedor {
+    width: 100%;
+  }
+  .seccion-estudios .imagen-estudios {
+    width: 30%;
+  }
+  .seccion-tecnologias {
+    justify-content: space-around;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .seccion-tecnologias .sub-titulos-contenedor {
+    width: 100%;
+  }
+  .seccion-tecnologias img {
+    width: 15%;
+  }
+  .footer-contenedor .texto-footer {
+    display: inline;
+    margin-left: 1rem;
+    text-align: center;
+    font-family: "Oswald", sans-serif;
+  }
+}
+@keyframes animacionTexto {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}/*# sourceMappingURL=styles.css.map */

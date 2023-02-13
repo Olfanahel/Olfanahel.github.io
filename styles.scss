@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap');
+
+@mixin textoPrincipal{
+    position: absolute;
+    text-align: center;
+    z-index: 10;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.8rem;
+}
+
+@mixin contenedor{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    border-bottom: 2px solid #8E3021;
+    background: #D2CECD;
+}
+
+@mixin textos{
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+}
+
+@mixin sub-titulos{
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    font-size: 4rem;
+}
+
+@mixin sub-titulos-cont{
+    display: flex;
+    justify-content: center;
+    background-color: #D2CECD;
+    padding-top: 0.5rem;
+}
+
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+
+a:link{
+    text-decoration: none;
+    color: black;
+}
+
+a:visited{
+    text-decoration: none;
+    color: black;
+}
+
+.bi{
+    color: white;
+    padding-right: 0.5rem;
+}
+ 
+.navbar-custom{
+    background-color: #8E3021;
+}
+
+.nav-link-custom{
+    border-bottom: 2px solid black;
+    color: white;
+}
+.inicio-contenedor{
+    height: 93.5vh;
+    background-color: #4D504D;
+    display: flex;
+    position: relative;
+    overflow-x: hidden;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    img{
+        width: 100%;
+        height: 100%;
+        z-index: 5;
+        position: absolute;
+        opacity: 0.8;
+    }
+    .texto-principal{
+        @include textoPrincipal;
+        padding-left: 0.5rem;
+    }
+    .boton-principal{
+        position: absolute;
+        z-index: 10;
+        bottom: 12rem;
+        border: 2px solid #8E3021;
+        background: none;
+        border-radius: 5px;
+        padding: 0.5rem 2rem;
+        font-family: 'Oswald', sans-serif;
+        font-size: 1rem;
+        text-decoration: none;
+    }
+    .boton-principal:focus{
+        background: #8E3021;
+    }
+    .boton-principal:hover{
+        background-color: #8E3021;
+    }
+}
+
+.seccion-conoceme{
+    @include contenedor;
+    justify-content: center;
+    padding-top: 5rem;
+    .img-conoceme{
+        width: 40%;
+        img{
+            width: 100%;
+            border-radius: 50%;
+        }
+    }
+    .texto-conoceme{
+        @include textos;
+    }
+}
+
+.sub-titulos-contenedor{
+    @include sub-titulos-cont;
+    h2{
+        @include sub-titulos;
+    }
+}
+
+.seccion-estudios{
+    @include contenedor;
+    background: #D2CECD;
+    .imagen-estudios{
+        width: 90%;
+        img{
+            width: 100%;
+            margin-bottom: 1rem;
+        }
+    }
+    .texto-estudios{
+        @include textos;
+        margin-bottom: 5rem;
+    }
+}
+
+.seccion-tecnologias{
+    @include contenedor;
+    flex-wrap: wrap;
+    flex-direction: row;
+    img{
+        width: 50%;
+    }
+    .sub-titulos-contenedor{
+        padding-left: 1.3rem;
+    }
+}
+
+.footer-contenedor{
+    background-color: #8E3021;
+    height: 5rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    .bi{
+        font-size: 3rem;
+    }
+    .texto-footer{
+        display: none;
+    }
+}
+
+@media (min-width: 1024px){
+    .inicio-contenedor{
+        height: 100vh;
+    }
+    .nav-link-custom{
+        border: none;
+    }
+    .seccion-conoceme{
+        .img-conoceme{
+            width: 20%;
+            margin-bottom: 2rem;
+            img{
+                width: 100%;
+            }
+        }
+    }
+    .seccion-estudios{
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        .sub-titulos-contenedor{
+            width: 100%;
+        }
+        .imagen-estudios{
+            width: 30%;
+        }
+    }
+    .seccion-tecnologias{
+        justify-content: space-around;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        .sub-titulos-contenedor{
+            width: 100%;
+        }
+        img{
+            width: 15%;
+        }
+    }
+    .footer-contenedor{
+        .texto-footer{
+            display: inline;
+            margin-left: 1rem;
+            @include textos;
+        }
+    }
+}
+
+@keyframes animacionTexto {
+    from{
+        transform: translateX(-100%);
+    } 
+    to{
+        transform: translateX(0);
+    }   
+}
